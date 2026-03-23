@@ -1,0 +1,7 @@
+portal-chat.jsonl
+makr-decks/
+makr-deals.json
+deploy/
+*.log
+__pycache__/
+.env
