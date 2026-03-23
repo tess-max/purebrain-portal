@@ -1665,6 +1665,43 @@
 </head>
 <body>
 
+<!-- ═══════════════ PASSWORD GATE ═══════════════ -->
+<div id="pw-gate" style="position:fixed;inset:0;background:#0a0a0a;display:flex;align-items:center;justify-content:center;z-index:99999;">
+  <div style="width:360px;text-align:center;">
+    <div style="font-size:28px;font-weight:900;letter-spacing:-.02em;color:#fff;margin-bottom:4px;">MAKR</div>
+    <div style="font-size:12px;color:#666;margin-bottom:40px;letter-spacing:.08em;text-transform:uppercase;">Venture Fund OS</div>
+    <input id="pw-input" type="password" placeholder="Enter access code"
+      style="width:100%;box-sizing:border-box;padding:14px 18px;border-radius:10px;border:1px solid #333;background:#111;color:#fff;font-size:14px;outline:none;margin-bottom:12px;font-family:inherit;"
+      onkeydown="if(event.key==='Enter')pwCheck()">
+    <div id="pw-error" style="color:#E83A12;font-size:12px;min-height:18px;margin-bottom:10px;"></div>
+    <button onclick="pwCheck()"
+      style="width:100%;padding:14px;border-radius:10px;background:#E83A12;color:#fff;font-size:14px;font-weight:700;border:none;cursor:pointer;font-family:inherit;">
+      Access Portal
+    </button>
+  </div>
+</div>
+
+<script>
+(function() {
+  const PW = 'makr2026';
+  if (localStorage.getItem('makr-auth') === PW) {
+    document.getElementById('pw-gate').style.display = 'none';
+  }
+  window.pwCheck = function() {
+    const val = document.getElementById('pw-input').value;
+    if (val === PW) {
+      localStorage.setItem('makr-auth', PW);
+      document.getElementById('pw-gate').style.display = 'none';
+    } else {
+      document.getElementById('pw-error').textContent = 'Incorrect access code';
+      document.getElementById('pw-input').value = '';
+      document.getElementById('pw-input').focus();
+    }
+  };
+  setTimeout(() => document.getElementById('pw-input')?.focus(), 100);
+})();
+</script>
+
 <!-- ═══════════════ TOP BAR ═══════════════ -->
 <div class="topbar">
   <div class="topbar-logo">
