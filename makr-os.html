@@ -1915,21 +1915,21 @@
       </div>
 
       <!-- 4. Fund Management -->
-      <div class="hc-card" style="opacity:.85;" onclick="showToast('Fund Management Hub — coming soon in Phase 2')">
-        <div class="hc-stripe" style="background:#2563eb"></div>
+      <div class="hc-card" style="opacity:.85;" onclick="showToast('Fund Management — coming soon in Phase 2')">
+        <div class="hc-stripe" style="background:#0f766e"></div>
         <div class="hc-body">
           <div class="hc-head">
             <div class="hc-title-block">
               <div class="hc-title">Fund Management</div>
-              <div class="hc-owner">Finance Team</div>
+              <div class="hc-owner">GP · CFO</div>
             </div>
-            <div class="hc-status"><span class="hc-dot live"></span><span style="color:var(--green)">Live</span></div>
+            <div class="hc-status"><span class="hc-dot alert"></span><span style="color:var(--amber)">Soon</span></div>
           </div>
           <div class="hc-tags">
-            <span class="hc-tag" style="color:#2563eb;border-color:#2563eb;background:rgba(37,99,235,.08)">LP Relations</span>
-            <span class="hc-tag" style="color:#2563eb;border-color:#2563eb;background:rgba(37,99,235,.08)">Capital Deployment</span>
-            <span class="hc-tag" style="color:#2563eb;border-color:#2563eb;background:rgba(37,99,235,.08)">Fund Metrics</span>
-            <span class="hc-tag" style="color:#2563eb;border-color:#2563eb;background:rgba(37,99,235,.08)">Compliance</span>
+            <span class="hc-tag" style="color:#0f766e;border-color:#0f766e;background:rgba(15,118,110,.08)">LP Reporting</span>
+            <span class="hc-tag" style="color:#0f766e;border-color:#0f766e;background:rgba(15,118,110,.08)">Cap Table</span>
+            <span class="hc-tag" style="color:#0f766e;border-color:#0f766e;background:rgba(15,118,110,.08)">Fees &amp; Carry</span>
+            <span class="hc-tag" style="color:#0f766e;border-color:#0f766e;background:rgba(15,118,110,.08)">Financials</span>
           </div>
           <div class="hc-section">
             <div class="hc-section-head"><span class="hc-section-label">Agents</span></div>
@@ -1939,14 +1939,52 @@
             <div class="hc-section-head"><span class="hc-section-label">Processes</span></div>
             <span class="hc-tbd-badge">To be mapped</span>
           </div>
+        </div>
+        <hr class="hc-divider">
+        <div class="hc-footer">
+          <span class="hc-stat">Phase 2</span>
+          <span class="hc-open">Coming soon →</span>
+        </div>
+      </div>
+
+      <!-- 5. Fund Ops Hub -->
+      <div class="hc-card" onclick="showView('fundops');foInitHub()">
+        <div class="hc-stripe" style="background:#4F46E5"></div>
+        <div class="hc-body">
+          <div class="hc-head">
+            <div class="hc-title-block">
+              <div class="hc-title">Fund Ops Hub</div>
+              <div class="hc-owner">Melanie Salvador</div>
+            </div>
+            <div class="hc-status"><span class="hc-dot live"></span><span style="color:var(--green)">Live</span></div>
+          </div>
+          <div class="hc-tags">
+            <span class="hc-tag" style="color:#4F46E5;border-color:#4F46E5;background:rgba(79,70,229,.08)">Email Management</span>
+            <span class="hc-tag" style="color:#4F46E5;border-color:#4F46E5;background:rgba(79,70,229,.08)">LP Comms</span>
+            <span class="hc-tag" style="color:#4F46E5;border-color:#4F46E5;background:rgba(79,70,229,.08)">Fund Admin</span>
+            <span class="hc-tag" style="color:#4F46E5;border-color:#4F46E5;background:rgba(79,70,229,.08)">Compliance</span>
+          </div>
           <div class="hc-section">
-            <div class="hc-section-head"><span class="hc-section-label">Templates</span></div>
-            <span class="hc-tbd-badge">To be mapped</span>
+            <div class="hc-section-head"><span class="hc-section-label">Agents</span><span class="hc-section-count">2 active</span></div>
+            <div class="hc-item"><span class="hc-item-dot" style="background:var(--amber)"></span>Inbox Agent</div>
+            <div class="hc-item"><span class="hc-item-dot" style="background:var(--green)"></span>Intake Agent</div>
+          </div>
+          <div class="hc-section">
+            <div class="hc-section-head"><span class="hc-section-label">Processes</span><span class="hc-section-count">2 defined</span></div>
+            <div class="hc-item"><span class="hc-item-dot" style="background:var(--amber)"></span>Inbox Classification</div>
+            <div class="hc-item"><span class="hc-item-dot" style="background:var(--green)"></span>Intake &amp; Screening</div>
+          </div>
+          <div class="hc-section">
+            <div class="hc-section-head"><span class="hc-section-label">Email folders</span><span class="hc-section-count">8 default</span></div>
+            <div class="hc-template-row">
+              <span class="hc-template-badge ready">7 active</span>
+              <span class="hc-template-badge needed">1 configuring</span>
+            </div>
           </div>
         </div>
         <hr class="hc-divider">
         <div class="hc-footer">
-          <span class="hc-stat">63% deployed · $18.5M remaining</span>
+          <span class="hc-stat">38 emails classified MTD · 6 deal flow</span>
           <span class="hc-open">Open hub →</span>
         </div>
       </div>
@@ -2717,6 +2755,120 @@
     </div><!-- end ph-shell -->
   </div><!-- end #view-portfolio -->
 
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━
+       VIEW: FUND OPS HUB
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <div id="view-fundops" class="view">
+    <div style="display:flex;flex-direction:column;height:100%;overflow:hidden;">
+
+      <!-- Header -->
+      <div style="flex-shrink:0;padding:12px 24px;border-bottom:1px solid var(--border);background:var(--surface);display:flex;align-items:center;justify-content:space-between;">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <span style="font-size:11px;color:var(--text-muted);cursor:pointer;" onclick="showView('fund')">MAKR Brain ›</span>
+          <span style="font-size:11px;color:#4F46E5;font-weight:700;">Fund Ops Hub</span>
+        </div>
+        <div style="display:flex;gap:4px;">
+          <button class="dfh-tab active" id="fo-tab-overview"  onclick="foTab('overview',this)">Overview</button>
+          <button class="dfh-tab" id="fo-tab-inbox"    onclick="foTab('inbox',this)">Inbox Agent</button>
+          <button class="dfh-tab" id="fo-tab-intake"   onclick="foTab('intake',this)">Intake Agent</button>
+          <button class="dfh-tab" id="fo-tab-classify" onclick="foTab('classify',this)">Classification</button>
+        </div>
+      </div>
+
+      <!-- Panels -->
+      <div style="flex:1;overflow-y:auto;">
+
+        <!-- ── Overview ── -->
+        <div id="fo-panel-overview" style="padding:20px;display:block;">
+          <!-- Metrics strip -->
+          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);border-radius:10px;overflow:hidden;margin-bottom:20px;">
+            <div style="background:var(--surface);padding:14px;text-align:center;"><div style="font-size:18px;font-weight:800;">38</div><div style="font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);">Emails MTD</div></div>
+            <div style="background:var(--surface);padding:14px;text-align:center;"><div style="font-size:18px;font-weight:800;color:#4F46E5;">6</div><div style="font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);">Deal Flow</div></div>
+            <div style="background:var(--surface);padding:14px;text-align:center;"><div style="font-size:18px;font-weight:800;color:var(--amber);">3</div><div style="font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);">Review Needed</div></div>
+            <div style="background:var(--surface);padding:14px;text-align:center;"><div style="font-size:18px;font-weight:800;color:var(--green);">24</div><div style="font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);">Auto-classified</div></div>
+            <div style="background:var(--surface);padding:14px;text-align:center;"><div style="font-size:18px;font-weight:800;">5</div><div style="font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);">Inboxes Monitored</div></div>
+          </div>
+          <!-- Two col -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <!-- Agent status -->
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;">
+              <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-bottom:12px;">Agent Status</div>
+              <div style="display:flex;flex-direction:column;gap:10px;">
+                <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--surface2);border-radius:8px;">
+                  <div><div style="font-size:12px;font-weight:700;">📧 Inbox Agent</div><div style="font-size:10px;color:var(--text-muted);margin-top:2px;">Monitors all MAKR inboxes · classifies &amp; routes</div></div>
+                  <span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:99px;background:rgba(217,119,6,.12);color:var(--amber);">Configuring</span>
+                </div>
+                <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--surface2);border-radius:8px;">
+                  <div><div style="font-size:12px;font-weight:700;">🔍 Intake Agent</div><div style="font-size:10px;color:var(--text-muted);margin-top:2px;">Receives deal flow · logs · screens · assigns</div></div>
+                  <span style="font-size:10px;font-weight:700;padding:3px 10px;border-radius:99px;background:rgba(22,163,74,.12);color:var(--green);">Running</span>
+                </div>
+              </div>
+            </div>
+            <!-- Inboxes monitored -->
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;">
+              <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-bottom:12px;">Inboxes Monitored</div>
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <div id="fo-inboxes-render"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Inbox Agent ── -->
+        <div id="fo-panel-inbox" style="padding:20px;display:none;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;">
+              <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-bottom:12px;">Default Folder Structure</div>
+              <div style="display:flex;flex-direction:column;gap:6px;"><div id="fo-folders-render"></div></div>
+            </div>
+            <div>
+              <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:16px;">
+                <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-bottom:10px;">Personal Extensions</div>
+                <div style="font-size:11px;color:var(--text-muted);margin-bottom:10px;line-height:1.6;">Each team member customises their inbox agent via My Brain. Personal rules sit on top of fund-wide rules. GP approval required to override fund-wide settings.</div>
+                <div style="font-size:10px;font-weight:700;color:var(--text-muted);margin-bottom:6px;">Example instructions:</div>
+                <div id="fo-personal-render"></div>
+              </div>
+              <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;">
+                <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-bottom:10px;">Fund-Wide Rules</div>
+                <div style="display:flex;flex-direction:column;gap:6px;font-size:11px;">
+                  <div style="display:flex;gap:8px;"><span style="color:var(--green);">✓</span><span>Default folder structure applied to all inboxes on setup</span></div>
+                  <div style="display:flex;gap:8px;"><span style="color:var(--green);">✓</span><span>Classification logic applied fund-wide</span></div>
+                  <div style="display:flex;gap:8px;"><span style="color:var(--green);">✓</span><span>Source tagging before intake agent handoff</span></div>
+                  <div style="display:flex;gap:8px;"><span style="color:var(--green);">✓</span><span>Feedback loop — inbox cleanup on intake outcome</span></div>
+                  <div style="display:flex;gap:8px;"><span style="color:var(--amber);">◐</span><span>Daily digest — configuring per team member</span></div>
+                  <div style="display:flex;gap:8px;"><span style="color:var(--text-muted);">○</span><span>OAuth connections — pending team setup</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Intake Agent ── -->
+        <div id="fo-panel-intake" style="padding:20px;display:none;">
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;">
+            <div style="padding:14px 16px;border-bottom:1px solid var(--border);font-size:12px;font-weight:700;">Intake Agent — Step by Step</div>
+            <div style="display:flex;flex-direction:column;gap:0;"><div id="fo-steps-render"></div></div>
+          </div>
+        </div>
+
+        <!-- ── Classification ── -->
+        <div id="fo-panel-classify" style="padding:20px;display:none;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;">
+              <div style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);">Email Classification</div>
+              <div style="display:flex;flex-direction:column;gap:0;"><div id="fo-cats-render"></div></div>
+            </div>
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;">
+              <div style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);">Source Tagging Logic</div>
+              <div style="display:flex;flex-direction:column;gap:0;"><div id="fo-source-render"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end panels -->
+    </div>
+  </div><!-- end #view-fundops -->
+
 </div><!-- end .main -->
 
 <!-- ═══════════════ ADD DEAL MODAL ═══════════════ -->
@@ -2912,8 +3064,8 @@ function showView(id) {
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
   document.querySelectorAll('.topbar-nav button').forEach(b => b.classList.remove('active'));
   document.getElementById('view-' + id).classList.add('active');
-  const idx = {fund:0, dealflow:0, portfolio:0, fundbrain:1, mybrain:2, ask:3}[id];
-  document.querySelectorAll('.topbar-nav button')[idx].classList.add('active');
+  const idx = {fund:0, dealflow:0, portfolio:0, fundbrain:1, mybrain:2, ask:3, fundops:0}[id];
+  if (idx !== undefined) document.querySelectorAll('.topbar-nav button')[idx].classList.add('active');
   // Show/hide pipeline view toggle
   const toggle = document.getElementById('pipeline-view-toggle');
   if (toggle) {
@@ -6390,6 +6542,125 @@ function renderPillarModal(pillar, desc, color) {
   <ul class="ph-modal-list">
     ${cos.filter(c=>c.lifecycle!=='Exited').map(c=>`<li><span style="font-weight:700;">${c.name}</span><span style="font-size:12px;color:var(--text-muted);">${c.lifecycle} · ${c.arr}</span></li>`).join('')}
   </ul>`;
+}
+
+// ─── Fund Ops Hub ────────────────────────────────────────────────────────────
+function foTab(name, btn) {
+  document.querySelectorAll('#view-fundops .dfh-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  ['overview','inbox','intake','classify'].forEach(p => {
+    const el = document.getElementById('fo-panel-' + p);
+    if (el) el.style.display = 'none';
+  });
+  const panel = document.getElementById('fo-panel-' + name);
+  if (panel) panel.style.display = 'block';
+}
+
+let _foInit = false;
+function foInitHub() {
+  if (_foInit) return;
+  _foInit = true;
+
+  // Inboxes monitored
+  const ir = document.getElementById('fo-inboxes-render');
+  if (ir) ir.innerHTML = [
+    {addr:'hello@makrvf.com',type:'Fund inbox',status:'active'},
+    {addr:'melanie@makrvc.com',type:'GP',status:'active'},
+    {addr:'james@makrvc.com',type:'Principal',status:'active'},
+    {addr:'tess@makrvc.com',type:'Associate',status:'active'},
+    {addr:'oliver@makrvc.com',type:'MVP Lead',status:'pending'},
+  ].map(i=>`<div style="display:flex;align-items:center;justify-content:space-between;font-size:11px;margin-bottom:4px;">
+    <div><span style="font-weight:600;">${i.addr}</span><span style="color:var(--text-muted);margin-left:6px;">${i.type}</span></div>
+    <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:99px;background:${i.status==='active'?'rgba(22,163,74,.12)':'rgba(107,114,128,.1)'};color:${i.status==='active'?'var(--green)':'var(--text-muted)'};">${i.status}</span>
+  </div>`).join('');
+
+  // Default folders
+  const fr = document.getElementById('fo-folders-render');
+  if (fr) fr.innerHTML = [
+    {name:'Deal flow',desc:'Active deal flow emails — cleared on intake outcome'},
+    {name:'Service providers',desc:'Vendors, agencies, recruiters'},
+    {name:'LP & investor',desc:'LP comms, co-investors, fund admin'},
+    {name:'Portfolio',desc:'Emails from portco founders & teams'},
+    {name:'Network & advisors',desc:'Warm contacts, known advisors'},
+    {name:'Events & conferences',desc:'Speaking invites, demo days, conferences'},
+    {name:'Fund ops & admin',desc:'Legal, accounting, compliance, regulatory'},
+    {name:'Review',desc:'Agent unsure — team classifies manually'},
+  ].map(f=>`<div style="display:flex;gap:10px;padding:8px 10px;border-radius:7px;background:var(--surface2);margin-bottom:4px;">
+    <span>📁</span>
+    <div><div style="font-size:11px;font-weight:700;">${f.name}</div><div style="font-size:10px;color:var(--text-muted);">${f.desc}</div></div>
+  </div>`).join('');
+
+  // Personal examples
+  const pr = document.getElementById('fo-personal-render');
+  if (pr) pr.innerHTML = [
+    '"Move all emails from law firms into a Legal folder"',
+    '"Emails from [person] always go to priority"',
+    '"Send me a daily digest at 8am"',
+    '"Any founder I met at a conference → Deal flow, not Review"',
+  ].map(e=>`<div style="font-size:10px;color:var(--text-dim);padding:5px 9px;background:var(--surface2);border-radius:6px;margin-bottom:4px;font-style:italic;">${e}</div>`).join('');
+
+  // Intake steps
+  const sr = document.getElementById('fo-steps-render');
+  if (sr) sr.innerHTML = [
+    {n:1,name:'Receive handoff',desc:'Inbox agent passes the email with source tag attached (cold inbound / advisor referral / team sourcing / GP sourced / ecosystem / Plug & Play). Intake agent confirms receipt.',type:'Automated',tc:'#166534',tb:'#dcfce7'},
+    {n:2,name:'Add to master log',desc:'Every deal flow email is logged to the master spreadsheet regardless of outcome. Company name, date received, source tag, channel, who it was sent to, and current status all recorded at this point.',type:'Automated',tc:'#166534',tb:'#dcfce7'},
+    {n:3,name:'Legitimacy check',desc:'Is this a real company? Agent checks website, LinkedIn, Crunchbase/Pitchbook record. Fails legitimacy → signals inbox agent to delete from all inboxes · logs reason.',type:'Automated',tc:'#166534',tb:'#dcfce7'},
+    {n:4,name:'Enrichment',desc:'Agent pulls Pitchbook + Crunchbase data: funding history, team, investors, estimated ARR, geography, sector. Populates company record.',type:'Automated',tc:'#166534',tb:'#dcfce7'},
+    {n:5,name:'Screen',desc:'Cold inbound & Plug & Play = full auto-screen (threshold 60). Advisor / team / ecosystem = soft screen. GP sourced = skips screen entirely → deck request.',type:'Mixed',tc:'#9A3412',tb:'#fee2d5'},
+    {n:6,name:'Assign associate',desc:'For companies that pass screening: assigns associate or analyst based on sector expertise and current workload. Associate notified in My Brain.',type:'Manual gate',tc:'#9A3412',tb:'#fee2d5'},
+    {n:7,name:'Signal back',desc:"Outcome signalled to inbox agent: pass (keep in assigned associate's inbox only) · fail (delete from all inboxes) · archived rejection (deal lead archive only).",type:'Automated',tc:'#166534',tb:'#dcfce7'},
+  ].map(s=>`<div style="display:flex;gap:14px;padding:14px 16px;border-bottom:1px solid var(--border);align-items:flex-start;">
+    <div style="min-width:22px;height:22px;border-radius:50%;background:#4F46E5;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">${s.n}</div>
+    <div style="flex:1;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+        <span style="font-size:12px;font-weight:700;">${s.name}</span>
+        <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:99px;background:${s.tb};color:${s.tc};">${s.type}</span>
+      </div>
+      <div style="font-size:11px;color:var(--text-muted);line-height:1.6;">${s.desc}</div>
+    </div>
+  </div>`).join('');
+
+  // Email categories
+  const cr = document.getElementById('fo-cats-render');
+  if (cr) cr.innerHTML = [
+    {cat:'Deal flow',desc:'Companies pitching, deck submissions, follow-ups, conference intros, portco referrals',route:'Intake agent + deal flow folder',tag:'Source tag applied'},
+    {cat:'Service providers',desc:'Vendors, recruiters, law firms, agencies selling to VCs',route:'Service providers folder',tag:''},
+    {cat:'LP & investor',desc:'Existing or prospective LPs, co-investors, fund admin contacts',route:'LP & investor folder · flag for GP',tag:''},
+    {cat:'Portfolio comms',desc:'Emails from portfolio company founders or team members',route:'Portfolio folder → portfolio hub',tag:''},
+    {cat:'Network & advisors',desc:'Warm contacts, known advisors, professional network, non-deal intros',route:'Network folder · flag for recipient',tag:''},
+    {cat:'Events & conferences',desc:'Speaking invitations, sponsor requests, demo days, registrations',route:'Events folder · flag for relevant person',tag:''},
+    {cat:'Fund ops & admin',desc:'Legal, accounting, compliance, bank, fund administrator, regulatory',route:'Fund ops folder → fund ops hub',tag:''},
+    {cat:'Review needed',desc:'Agent is unsure — ambiguous sender or unusual content',route:'Review folder · flag for team member',tag:'None until classified'},
+    {cat:'Junk / spam',desc:'Obvious spam, bulk mail, irrelevant mass outreach',route:'Deleted immediately',tag:''},
+  ].map(c=>`<div style="padding:10px 14px;border-bottom:1px solid var(--border);">
+    <div style="font-size:11px;font-weight:700;margin-bottom:2px;">${c.cat}</div>
+    <div style="font-size:10px;color:var(--text-muted);margin-bottom:4px;">${c.desc}</div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;">
+      <span style="font-size:9px;padding:2px 7px;border-radius:99px;background:rgba(79,70,229,.1);color:#4F46E5;">${c.route}</span>
+      ${c.tag?`<span style="font-size:9px;padding:2px 7px;border-radius:99px;background:rgba(217,119,6,.1);color:var(--amber);">${c.tag}</span>`:''}
+    </div>
+  </div>`).join('');
+
+  // Source tagging
+  const sor = document.getElementById('fo-source-render');
+  if (sor) sor.innerHTML = [
+    {trigger:'Sent to hello@makrvf.com · no prior contact',tag:'Cold inbound',screen:'Full auto-screen'},
+    {trigger:'Sent to team member · sender in advisor registry',tag:'Advisor referral',screen:'Soft screen'},
+    {trigger:'Sent to team member · sender domain matches portco',tag:'Ecosystem referral',screen:'Soft screen'},
+    {trigger:'Cold email to personal inbox · no prior contact',tag:'Cold inbound',screen:'Full auto-screen'},
+    {trigger:'Prior contact exists · team member has met this person',tag:'Team sourcing',screen:'Soft screen'},
+    {trigger:'Sent to GP · or GP forwards with log instruction',tag:'GP sourced',screen:'Skips screen → deck request'},
+    {trigger:'Submitted via advisor portal',tag:'Advisor referral',screen:'Soft screen'},
+    {trigger:'Team member adds directly',tag:'Team sourcing',screen:'Soft screen'},
+    {trigger:'Batch upload from Plug & Play session',tag:'Plug & Play',screen:'Batch screen'},
+    {trigger:'Agent cannot determine source',tag:'Review — team confirms',screen:'Held pending confirmation'},
+  ].map(s=>`<div style="padding:10px 14px;border-bottom:1px solid var(--border);">
+    <div style="font-size:10px;color:var(--text-muted);margin-bottom:4px;">${s.trigger}</div>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:99px;background:rgba(79,70,229,.1);color:#4F46E5;">${s.tag}</span>
+      <span style="font-size:10px;color:var(--text-muted);">→ ${s.screen}</span>
+    </div>
+  </div>`).join('');
 }
 
 function phOpenModal(key) {
